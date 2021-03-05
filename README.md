@@ -2,6 +2,7 @@
 
 ## Tasks
 
+COMPULSORY
 ```text
 Create an object-oriented model of the problem. You should have (at least) the following classes: Source, Destination, Problem.
 The sources and the destinations have names. The sources will also have the property type. The available types will be implemented as an enum . For example:
@@ -16,11 +17,19 @@ Use the IDE features for code generation, for example (in NetBeans) press Alt+In
 Create and print on the screen the instance of the problem described in the example.
 
 ```
+OPTIONAL
+```text
+Override the equals method form the Object class for the Source, Destination classes. The problem should not allow adding the same source or destination twice.
+Instead of using an enum, create dedicated classes for warehouses and factories. Source will become abstract.
+Create a class to describe the solution.
+Implement a simple algorithm for creating a feasible solution to the problem (one that satisfies the supply and demand constraints).
+Write doc comments in your source code and generate the class documentation using javadoc.
+```
 
 ## Solved tasks
 
 As of today (28.02.2021) I have solved all tasks regarding the compulsory task.
-
+As of March 5th I have solved the optional tasks as well.
 ## Build and run
 
 To compile and run my project I have typed the following commands in the terminal:
@@ -30,7 +39,7 @@ java compulsory.Main
 ```
 
 ## Output
-The output is the following:
+The output for the comoulsory part is the following:
 ```bash
 Problem: {sources=[Source: S1, FACTORY, 10, Source: S2, WAREHOUSE, 35, Source: S3, WAREHOUSE, 25], destinations=[Destination: D1, 20, Destination: D2, 25, Destination: D3, 25], cost=[[
 2, 3, 1], [5, 4, 8], [5, 6, 8]]}
@@ -39,5 +48,17 @@ Problem: {sources=[Source: S1, FACTORY, 10, Source: S2, WAREHOUSE, 35, Source: S
 5 4 8 35
 5 6 8 25
 20 25 25
+
+```
+The output for the optional part is:
+```bash
+Problem: {sources=[Source: S1, factory, 10, Source: S2, warehouse, 35, Source: S3, warehouse, 25], destinations=[Destination: D1, 20, Destination: D2, 25, Destination: D3, 25], cost=[[
+2, 3, 1], [5, 4, 8], [5, 6, 8]]}
+
+2 3 1 10
+5 4 8 35
+5 6 8 25
+20 25 25
+Total cost: 330
 
 ```

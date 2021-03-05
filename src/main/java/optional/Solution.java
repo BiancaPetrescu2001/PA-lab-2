@@ -11,6 +11,10 @@ public class Solution {
         this.cost = p.getCost();
     }
 
+    /**
+     *
+     * @return the algorithm returns the total cost of the problem
+     */
     public int solve() {
 
         int solution = 0;
